@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         <ul>
           <li>懶加載路由</li>
           <li>TypeScript 支持</li>
-          <li>現代化 UI 設計</li>
+          <li className="text-red-500">現代化 UI 設計</li>
         </ul>
       </div>
     </div>
