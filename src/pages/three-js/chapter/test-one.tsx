@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 //第一个3d场景，一个正方体，一个点光源
 
 export default function TestOne() {
@@ -12,7 +11,6 @@ export default function TestOne() {
 
     const scene = new THREE.Scene();
     let renderer: THREE.WebGLRenderer;
-    const gui = new GUI();
 
     {
       const geometry = new THREE.BoxGeometry(100, 100, 100);
@@ -22,22 +20,12 @@ export default function TestOne() {
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.set(0, 0, 0);
       scene.add(mesh);
-      const meshFolder = gui.addFolder('立方体');
-      meshFolder.addColor(mesh.material, 'color');
-      meshFolder.add(mesh.position, 'x').step(10);
-      meshFolder.add(mesh.position, 'y').step(10);
-      meshFolder.add(mesh.position, 'z').step(10);
     }
 
     {
       const pointLight = new THREE.PointLight(0xffffff, 10000);
       pointLight.position.set(80, 80, 80);
       scene.add(pointLight);
-      const lightFolder = gui.addFolder('灯光');
-      lightFolder.add(pointLight.position, 'x').step(10);
-      lightFolder.add(pointLight.position, 'y').step(10);
-      lightFolder.add(pointLight.position, 'z').step(10);
-      lightFolder.add(pointLight, 'intensity').step(1000);
     }
 
     {

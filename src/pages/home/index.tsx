@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const items = [
   {
-    title: 'three.js',
-    route: '/three-js',
+    title: 'three.js 编辑器',
+    route: '/three-editor',
   },
   {
     title: '简历',
