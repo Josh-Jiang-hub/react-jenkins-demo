@@ -65,6 +65,7 @@ export default function CountdownProgress({
   }, [paused, duration, remaining, onTick, onComplete]);
 
   const progress = Math.max(0, (remaining / duration) * 100);
+  console.log('progress', progress);
 
   return (
     <div

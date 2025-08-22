@@ -29,7 +29,8 @@
     "tailwind-merge": "^3.0.2",
     "three": "^0.178.0",
     "uuid": "^11.1.0",
-    "zustand": "^5.0.4"
+    "zustand": "^5.0.4",
+    "@ebay/nice-modal-react": "^1.2.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

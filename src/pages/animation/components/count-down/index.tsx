@@ -29,7 +29,7 @@ export default function CountDown() {
       </div>
       <div className="mb-[20px] flex flex-col gap-[10px]">
         <h3 className="w-fit">倒计时2</h3>
-        <CountdownProgress paused={!isRunning} duration={seconds} />
+        <CountdownProgress paused={false} duration={30} />
       </div>
 
       <div className="mb-[20px] flex flex-col gap-[10px]">

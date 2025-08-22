@@ -5,13 +5,15 @@ import { Menu } from 'antd';
 import CountDown from './components/count-down';
 import DynamicList from './components/dynamic-list';
 import TestRecorder from './components/test-recorder';
+import Modal from './components/modal';
+import NiceModal from '@ebay/nice-modal-react';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 const items: MenuItem[] = [
   {
     key: 'animation-effect',
-    label: '场景效果',
+    label: '场景',
     icon: <ClockCircleOutlined />,
     children: [
       {
@@ -26,6 +28,10 @@ const items: MenuItem[] = [
         key: 'testRecord',
         label: '测试录音',
       },
+      {
+        key: 'modal',
+        label: '弹窗',
+      },
     ],
   },
 ];
@@ -34,6 +40,7 @@ const contentNode = {
   countdown: <CountDown />,
   dynamicList: <DynamicList />,
   testRecord: <TestRecorder />,
+  modal: <Modal />,
 };
 
 const App: React.FC = () => {
@@ -41,23 +48,25 @@ const App: React.FC = () => {
     console.log('click ', e);
     setCurrent(e.key);
   };
-  const [current, setCurrent] = useState('dynamicList');
+  const [current, setCurrent] = useState('countdown');
   return (
-    <div className="min-h-[100vh] flex">
-      <Menu
-        onClick={onClick}
-        style={{ width: 256 }}
-        className="min-h-[100vh]"
-        defaultSelectedKeys={['1']}
-        selectedKeys={[current]}
-        openKeys={['animation-effect']}
-        mode="inline"
-        items={items}
-      />
-      <div className="flex p-[30px] justify-center w-full h-[100vh] overflow-auto">
-        {contentNode[current]}
+    <NiceModal.Provider>
+      <div className="min-h-[100vh] flex">
+        <Menu
+          onClick={onClick}
+          style={{ width: 256 }}
+          className="min-h-[100vh]"
+          defaultSelectedKeys={['1']}
+          selectedKeys={[current]}
+          openKeys={['animation-effect']}
+          mode="inline"
+          items={items}
+        />
+        <div className="flex p-[30px] justify-center w-full h-[100vh] overflow-auto">
+          {contentNode[current]}
+        </div>
       </div>
-    </div>
+    </NiceModal.Provider>
   );
 };
 
