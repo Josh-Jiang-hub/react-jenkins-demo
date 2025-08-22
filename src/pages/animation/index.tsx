@@ -11,7 +11,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 const items: MenuItem[] = [
   {
     key: 'animation-effect',
-    label: '动画效果',
+    label: '场景效果',
     icon: <ClockCircleOutlined />,
     children: [
       {
