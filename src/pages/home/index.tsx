@@ -26,6 +26,10 @@ const items = [
     title: '其他',
     route: '/other',
   },
+  {
+    title: '录音',
+    route: '/recorder',
+  },
 ];
 
 const colors = [
