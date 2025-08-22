@@ -4,6 +4,7 @@ import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import CountDown from './components/count-down';
 import DynamicList from './components/dynamic-list';
+import TestRecorder from './components/test-recorder';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -21,6 +22,10 @@ const items: MenuItem[] = [
         key: 'dynamicList',
         label: '动态列表',
       },
+      {
+        key: 'testRecord',
+        label: '测试录音',
+      },
     ],
   },
 ];
@@ -28,6 +33,7 @@ const items: MenuItem[] = [
 const contentNode = {
   countdown: <CountDown />,
   dynamicList: <DynamicList />,
+  testRecord: <TestRecorder />,
 };
 
 const App: React.FC = () => {
