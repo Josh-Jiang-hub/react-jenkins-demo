@@ -4,6 +4,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import './App.css';
 import ThreeEditor from './pages/three-js-editor';
 import Recorder from './pages/recorder';
+import Animation from './pages/animation';
 
 // 懶加載頁面組件
 const Home = React.lazy(() => import('./pages/home'));
@@ -22,6 +23,7 @@ function App() {
               <Route path="/css" element={<Css />} />
               <Route path="/three-editor" element={<ThreeEditor />} />
               <Route path="/recorder" element={<Recorder />} />
+              <Route path="/animation" element={<Animation />} />
             </Routes>
           </Suspense>
         </main>

@@ -23,12 +23,12 @@ const items = [
     route: '/other',
   },
   {
-    title: '其他',
-    route: '/other',
-  },
-  {
     title: '录音',
     route: '/recorder',
+  },
+  {
+    title: '动画',
+    route: '/animation',
   },
 ];
 
