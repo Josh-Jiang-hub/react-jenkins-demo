@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
+    "@ebay/nice-modal-react": "^1.2.13",
     "@monaco-editor/react": "^4.7.0",
     "@react-three/drei": "^10.4.4",
     "@react-three/fiber": "^9.2.0",
+    "@zumer/snapdom": "^1.9.9",
     "ant-design": "^1.0.0",
     "antd": "^5.25.1",
     "antd-mobile": "^5.39.0",
@@ -29,8 +31,7 @@
     "tailwind-merge": "^3.0.2",
     "three": "^0.178.0",
     "uuid": "^11.1.0",
-    "zustand": "^5.0.4",
-    "@ebay/nice-modal-react": "^1.2.13"
+    "zustand": "^5.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
