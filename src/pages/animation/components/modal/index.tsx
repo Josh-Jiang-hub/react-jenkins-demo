@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import MyModal from '@/components/my-modal';
-import { show } from '@ebay/nice-modal-react';
+import { show } from '@/super-control-modal';
 
 export default function Modal() {
   return (

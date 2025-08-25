@@ -1,7 +1,7 @@
 import { Modal } from 'antd';
-import { create, useModal } from '@ebay/nice-modal-react';
+import { createModal, useModal } from '@/super-control-modal';
 
-const MyModal = create(({ children }: { children: React.ReactNode }) => {
+const MyModal = createModal(({ children }: { children: React.ReactNode }) => {
   const modal = useModal();
   console.log(modal.visible);
 

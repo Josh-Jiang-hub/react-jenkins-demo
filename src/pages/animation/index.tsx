@@ -6,7 +6,7 @@ import CountDown from './components/count-down';
 import DynamicList from './components/dynamic-list';
 import TestRecorder from './components/test-recorder';
 import Modal from './components/modal';
-import NiceModal from '@ebay/nice-modal-react';
+import { InnerContextProvider } from '@/super-control-modal';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -50,7 +50,7 @@ const App: React.FC = () => {
   };
   const [current, setCurrent] = useState('countdown');
   return (
-    <NiceModal.Provider>
+    <InnerContextProvider>
       <div className="min-h-[100vh] flex">
         <Menu
           onClick={onClick}
@@ -66,7 +66,7 @@ const App: React.FC = () => {
           {contentNode[current]}
         </div>
       </div>
-    </NiceModal.Provider>
+    </InnerContextProvider>
   );
 };
 
