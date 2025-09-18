@@ -1,0 +1,24 @@
+diff --git a/dist/index.js b/dist/index.js
+index 75b28d6b9a6927fcf03112e2d845eea34964f7b0..237891a4b0d946a0ee30a0f0756b2af823f9b135 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1943,18 +1943,7 @@ const vi = {
+   watermarkMessage: "You have installed a version of `@virtuoso.dev/message-list` that is newer than the period of your license key. Either downgrade to a supported version, or purchase a new license from https://virtuoso.dev/pricing/"
+ }, yi = ko, $i = /^(?:127\.0\.0\.1|localhost|0\.0\.0\.0|.+\.local)$/, wi = ["virtuoso.dev", "csb.app", "codesandbox.io"];
+ function Li({ licenseKey: e, now: t, hostname: n, packageTimestamp: o }) {
+-  const i = n.match($i), s = wi.some((r) => n.endsWith(r));
+-  if (!e)
+-    return s ? yi : i ? ki : Si;
+-  const l = Ii(e);
+-  if (l === So)
+-    return xi;
+-  if (l.expiryDate.getTime() < t.getTime()) {
+-    if (i)
+-      return Ti;
+-    if (l.expiryDate.getTime() < o)
+-      return Ei;
+-  }
++
+   return ko;
+ }
+ const xo = h.createContext(vi), Ri = ({

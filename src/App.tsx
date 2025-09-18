@@ -5,6 +5,7 @@ import './App.css';
 import ThreeEditor from './pages/three-js-editor';
 import Recorder from './pages/recorder';
 import Animation from './pages/animation';
+import Chat from './pages/chat';
 
 // 懶加載頁面組件
 const Home = React.lazy(() => import('./pages/home'));
@@ -24,6 +25,7 @@ function App() {
               <Route path="/three-editor" element={<ThreeEditor />} />
               <Route path="/recorder" element={<Recorder />} />
               <Route path="/animation" element={<Animation />} />
+              <Route path="/chat" element={<Chat />} />
             </Routes>
           </Suspense>
         </main>
